@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <title>Slide Down FullScreen Nav</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)"
+        class = "closebtn"
+        onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <h2>ASSASSIN GHOST</h2>
+
+    <span id="hamburger" style="font-size:30px;cursor:pointer"
+    onclick="openNav()"> &#9776; </span>
+
+    <div class="body-content">
+
+        <h1>Slide Down Nav</h1>
+        <p>This is a responsive Slide Down Nav designed by Assassin Ghost</p>
+
+    </div>    
+
+    <div class="parallax"></div>
+
+        
+    <script>
+        
+        function openNav(){
+            document.getElementById("myNav")
+            .style.height="100%";
+        }
+       
+        function closeNav(){
+            document.getElementById("myNav")
+            .style.height="0%";
+        }
+
+        function myFunction(){
+            var input, filter, table, tr, td, i;
+            input=document.getElementById("myInput");
+
+            filter=input.value.toUpperCase();
+            
+            table=document.getElementById("myTable");
+
+            tr=table.getElementsByTagName("tr");
+
+            for(i=0; i<tr.length; i++){
+                td=tr[i].getElementsByTagName("td")[0];
+
+                if(td) {
+                    if (td.innerHTML.toUpperCase()
+                    .indexOf(filter) > -1) {
+
+                        tr[i].style.display="";
+                    }
+                    else {
+                        tr[i].style.display="none";
+                    }
+                }
+
+            }
+
+        }
+
+    </script>
+    
+
+</body>
+
+
+</html>
